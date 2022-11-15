@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>TOKO SEMBAKO</title>
+
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="assets/css/theme.css" rel="stylesheet" />
+
+  </head>
+
+
+  <body>
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="bg-primary py-2 d-none d-sm-block">
+
+        <div class="container">
+          <div class="row align-items-center">
+          
+            <div class="col-auto">
+              <p class="my-2 fs--1"><i class="fas fa-envelope me-3"></i><a class="text-900" href="mailto:A2.2000110@mhs.stmik-sumedang.com">a2.2000110@mhs.stmik-sumedang.com </a></p>
+            </div>
+          </div>
+        </div>
+        <!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+      <nav class="navbar navbar-expand-lg navbar-light sticky-top py-3 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
+        <div class="container"><a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" height="45" alt="logo" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
+          <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+            <div class="dropdown d-none d-lg-block">
+                <form>
+                </form>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <section class="pt-6 bg-600" id="home">
+        <body>
+          <div class="container mt-4">
+              <div class="row">
+                  
+                  <div>
+
+                </div>
+                  <div class="col-lg-4">
+                      <div class="card">
+                          <div class="card-body">
+                            <h1 class="alert  text-left">
+                              Tambahan Barang
+                          </h1>
+                              <form id="form">
+                                  <input type="hidden" name="id" id="id">
+                                  <label for="">Name</label>
+                                  <input type="text" placeholder="Name" class="form-control" name="name" id="name" required>
+                                  <br>
+                                  <label for="">jumlah</label>
+                                  <input type="number" placeholder="jumlah" class="form-control" name="jumlah" id="jumlah" required>
+                                  <br>
+                                  <label for="">harga</label>
+                                  <input type="text" placeholder="harga" class="form-control" id="harga" name="harga" required>
+                                  <br>
+                                  <button class="btn btn-sm btn-primary" type="button" onclick="save()">Save</button>
+                                  <button class="btn btn-sm btn-primary" type="button" onclick="clearData()">Reset</button>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-8">
+                      <div class="card">
+                          <div class="card-body">
+                              <div class="table-responsive">
+                                
+                                  <table id="datatable" class="table table-striped">
+                                    <form class="d-flex my-3 d-block d-lg-none">
+                                      <input  class="form-control me-2" type="text" id="searchList" placeholder="Search" />
+
+                                      
+                                      <thead>
+                                        
+                                        </form> 
+                                          <tr>
+                                              <th>No</th>
+                                              <th>Name</th>
+                                              <th>jumlah</th>
+                                              <th>harga</th>
+                                              <th>Edit</th>
+                                              <th>Hapus</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody id="table">
+              
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <script type="text/javascript">
+            
+          </script>
+          <script src="assets/js/all_data.js"></script>
+          <script src="assets/js/save.js"></script>
+          <script src="assets/js/find.js"></script>
+          <script src="assets/js/remove.js"></script>
+          <script>
+              allData()
+          </script>
+          <script>
+              function clearData(){
+                  document.getElementById('form').reset()
+                  document.getElementById('id').value = ""
+              }
+          </script>
+        </body>
+      </section>
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      
+
+
+      <section class="py-0" style="margin-top: -5.8rem;">
+        <div class="container bg-primary">
+          <div class="row justify-content-md-between justify-content-evenly py-4">
+            <div class="col-12 col-sm-8 col-md-6 col-lg-auto text-center text-md-start">
+              <p class="fs--1 my-2 fw-bold">-</p>
+            </div>
+            <div class="col-12 col-sm-8 col-md-6">
+              <p class="fs--1 my-2 text-center text-md-end">- </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+
+
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="vendors/is/is.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="vendors/fontawesome/all.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/register.js"></script>
+    <script src="service-worker.js"></script>
+
+
+    
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Rubik:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  </body>
+
+</html>
